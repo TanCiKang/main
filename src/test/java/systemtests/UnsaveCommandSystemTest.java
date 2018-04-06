@@ -1,11 +1,13 @@
 //@@author wyinkok
 package systemtests;
 
+import static junit.framework.TestCase.assertTrue;
 import static seedu.address.commons.core.Messages.MESSAGE_INVALID_INTERNSHIP_DISPLAYED_INDEX;
 import static seedu.address.logic.commands.UnsaveCommand.MESSAGE_UNSAVED_INTERNSHIP_SUCCESS;
 import static seedu.address.testutil.TestUtil.getInternship;
 import static seedu.address.testutil.TestUtil.getLastIndex;
 import static seedu.address.testutil.TestUtil.getMidIndex;
+import static seedu.address.testutil.TestUtil.getSecondLastIndex;
 import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_INTERNSHIP;
 import static seedu.address.testutil.TypicalPersonsWithSavedTag.KEYWORD_MATCHING_MEIER;
 
@@ -77,13 +79,13 @@ public class UnsaveCommandSystemTest extends AddressBookSystemTest {
 
         /* Case: filtered internship list, unsave index within bounds of internship book and internship list
          * -> unsave */
-        ///showInternshipsWithName(KEYWORD_MATCHING_MEIER);
-        //Index index = INDEX_FIRST_INTERNSHIP;
-        //assertTrue(index.getZeroBased() < getModel().getFilteredInternshipList().size());
-        //command = UnsaveCommand.COMMAND_WORD + " " + index.getOneBased();
-        //Internship personWithoutSavedTag = new UnsavedInternshipBuilder()
-        //        .removeTag(getModel().getFilteredInternshipList().get(index.getZeroBased()));
-        //        assertCommandSuccess(command, index, personWithoutSavedTag);
+        showInternshipsWithName(KEYWORD_MATCHING_MEIER);
+        Index index = INDEX_FIRST_INTERNSHIP;
+        assertTrue(index.getZeroBased() < getModel().getFilteredInternshipList().size());
+        command = UnsaveCommand.COMMAND_WORD + " " + index.getOneBased();
+        Internship personWithoutSavedTag = new UnsavedInternshipBuilder()
+                .removeTag(getModel().getFilteredInternshipList().get(index.getZeroBased()));
+                assertCommandSuccess(command, index, personWithoutSavedTag);
 
 
         /* Case: filtered internship list,
@@ -98,15 +100,15 @@ public class UnsaveCommandSystemTest extends AddressBookSystemTest {
 
         /* Case: unsave the selected internship
                       -> internship list panel selects the internship before the unsaved internship */
-        //showAllInternships();
-        //Model expectedModel = getModel();
-        //Index selectedIndex = getSecondLastIndex(expectedModel);
-        //Index expectedIndex = Index.fromZeroBased(selectedIndex.getZeroBased());
-        //selectInternship(selectedIndex);
-        //command = UnsaveCommand.COMMAND_WORD + " " + selectedIndex.getOneBased();
-        //Internship nexteditedInternship = removeSavedTagToInternship(expectedModel, selectedIndex);
-        //expectedResultMessage = String.format(MESSAGE_UNSAVED_INTERNSHIP_SUCCESS, nexteditedInternship);
-        //assertCommandSuccess(command, expectedModel, expectedResultMessage, expectedIndex);
+        showAllInternships();
+        Model expectedModel = getModel();
+        Index selectedIndex = getSecondLastIndex(expectedModel);
+        Index expectedIndex = Index.fromZeroBased(selectedIndex.getZeroBased());
+        selectInternship(selectedIndex);
+        command = UnsaveCommand.COMMAND_WORD + " " + selectedIndex.getOneBased();
+        Internship nexteditedInternship = removeSavedTagToInternship(expectedModel, selectedIndex);
+        expectedResultMessage = String.format(MESSAGE_UNSAVED_INTERNSHIP_SUCCESS, nexteditedInternship);
+        assertCommandSuccess(command, expectedModel, expectedResultMessage, expectedIndex);
 
         /* --------------------------------- Performing invalid unsave operation ---------------------------------- */
 

@@ -188,7 +188,7 @@ public class ModelManager extends ComponentManager implements Model {
         final UniqueTagList internshipTags = new UniqueTagList(internship.getTags());
 
         for (Tag tagToBeRemoved : tagsToBeRemoved) {
-            if (!tagToBeRemoved.toString().equals("saved")) {
+            if (!tagToBeRemoved.toString().equals("[saved]")) {
                 try {
                     internshipTags.delete(tagToBeRemoved);
                 } catch (SavedTagNotFoundException e) {
