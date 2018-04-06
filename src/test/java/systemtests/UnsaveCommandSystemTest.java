@@ -85,7 +85,7 @@ public class UnsaveCommandSystemTest extends AddressBookSystemTest {
         command = UnsaveCommand.COMMAND_WORD + " " + index.getOneBased();
         Internship personWithoutSavedTag = new UnsavedInternshipBuilder()
                 .removeTag(getModel().getFilteredInternshipList().get(index.getZeroBased()));
-                assertCommandSuccess(command, index, personWithoutSavedTag);
+        assertCommandSuccess(command, index, personWithoutSavedTag);
 
 
         /* Case: filtered internship list,
