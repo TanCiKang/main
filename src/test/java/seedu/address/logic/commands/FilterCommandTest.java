@@ -30,7 +30,7 @@ import seedu.address.model.internship.InternshipContainsAllKeywordsPredicate;
 public class FilterCommandTest {
 
     public static final String MESSAGE_FILTER_RESPONSE = "How would you to sort your results by? You may sort by "
-            + "Address, Industry, Location or Role. \nE.g sortby industry role location address";
+            + "name industry role etc \nE.g sortby industry role industry";
 
     private Model model = new ModelManager(getTypicalAddressBook(), new UserPrefs());
 

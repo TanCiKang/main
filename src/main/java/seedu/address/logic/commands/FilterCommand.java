@@ -19,7 +19,7 @@ public class FilterCommand extends Command {
             + "Example: " + COMMAND_WORD + "Marketing";
 
     public static final String MESSAGE_FILTER_RESPONSE = "How would you to sort your results by? You may sort by "
-            + "Address, Industry, Location or Role. \nE.g sortby industry role location address";
+            + "name industry role etc \nE.g sortby industry role industry";
 
     private final InternshipContainsAllKeywordsPredicate predicate;
 

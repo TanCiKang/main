@@ -178,9 +178,13 @@ public class AddCommandSystemTest extends AddressBookSystemTest {
 
         /* -------------------------- Perform add operation on the shown filtered list ------------------------------ */
 
+
         /* Case: filters the internship list before adding -> added */
-        //showInternshipsWithName(KEYWORD_MATCHING_MEIER);
-        //assertCommandSuccess(IDA);
+
+        /*
+        showInternshipsWithName(KEYWORD_MATCHING_MEIER);
+        assertCommandSuccess(IDA);
+        */
 
         /* ------------------------ Perform add operation while a internship card is selected ----------------------- */
 
