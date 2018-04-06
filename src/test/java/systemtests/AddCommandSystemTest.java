@@ -46,8 +46,6 @@ import static seedu.address.testutil.TypicalInternships.AMY;
 import static seedu.address.testutil.TypicalInternships.BOB;
 import static seedu.address.testutil.TypicalInternships.CARL;
 import static seedu.address.testutil.TypicalInternships.HOON;
-import static seedu.address.testutil.TypicalInternships.IDA;
-import static seedu.address.testutil.TypicalInternships.KEYWORD_MATCHING_MEIER;
 
 import org.junit.Test;
 
