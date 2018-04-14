@@ -151,7 +151,6 @@ public class ModelManager extends ComponentManager implements Model {
         for (String keyword : filterKeywords) {
             addFilteredInternshipsWithKeywordTags(filteredInternships, keyword, model);
         }
-        return;
     }
 
     //@@author TanCiKang
@@ -176,7 +175,6 @@ public class ModelManager extends ComponentManager implements Model {
                 }
             }
         });
-        return;
     }
 
     //@@author TanCiKang
@@ -228,7 +226,6 @@ public class ModelManager extends ComponentManager implements Model {
                 throw new AssertionError("The target internship cannot be missing");
             }
         }
-        return;
     }
 
     //@@author TanCiKang
@@ -240,7 +237,6 @@ public class ModelManager extends ComponentManager implements Model {
 
         model.updateSearchedInternshipList(PREDICATE_SHOW_ALL_INTERNSHIPS);
         ModelManager.removeTagsFromInternshipList(model.getFilteredInternshipList(), model);
-        return;
     }
 
     //=========== Filtered Internship List Accessors =============================================================
